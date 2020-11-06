@@ -50,7 +50,7 @@ Please guess a letter: ...
 
 And so on, until either you guess the word correctly, 
 or you run out of your guess attempts (you might wanna consider
-printinhg out a congratulatory message or something).
+printing out a congratulatory message or something).
 
 A few things you should keep in mind while doing this:
 * Variables are immutable by default! 
