@@ -102,36 +102,44 @@ this book still provides many useful ones with detailed descriptions.
 ---
 ### Practice
 
-* [rustlings](https://github.com/rust-lang/rustlings/) - An interactive basic local course
-* [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/)
-* [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
-* [Tour of Rust](https://tourofrust.com/)
-* [Rust Playground](https://play.rust-lang.org/)
+* [rustlings](https://github.com/rust-lang/rustlings/) - An interactive basic local course.
+* [Tour of Rust](https://tourofrust.com/) - Basic Web Intro to Rust.
+* [Exercism Rust Track](https://exercism.io/tracks/rust) - Interactive Rust exercises. To get Rust embedded in your muscle memory.
+* [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/) - A bunch of Rust examples ranked by topic and difficulty.
+* [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Super useful and smart ways of achieving basic things in Rust.
+* [Rust Playground](https://play.rust-lang.org/) - Rust IDE and compiler online.
 
 ---
 ### Other resources
 
-* [Rust Anthology](https://github.com/brson/rust-anthology)
-* [Rust Patterns](https://github.com/rust-unofficial/patterns)
-* [Idiomatic Rust](https://github.com/mre/idiomatic-rust)
-* [Rust Learning](https://github.com/ctjhoa/rust-learning)
-* [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
-* [Rust Using Simple English](https://github.com/Dhghomon/easy_rust)
+* [Rust Anthology](https://github.com/brson/rust-anthology/blob/master/master-list.md) - A semi-abandoned (I think) but nevertheless impressive collection of great Rust blog posts.
+* [Rust Patterns](https://github.com/rust-unofficial/patterns) - A collection of useful (and idiomatic) Rust patterns for the most popular use cases.
+* [Idiomatic Rust](https://github.com/mre/idiomatic-rust) - A collection of idiomatic and beautiful Rust. Worth checking out.
+* [Rust Learning](https://github.com/ctjhoa/rust-learning) - A huge collection of various Rust learning resources. Too overwhelming though.
+* [Awesome Rust](https://github.com/rust-unofficial/awesome-rust) - One of those 'Awesome language' repos, just a collection of Rust projects.
+* [Rust Using Simple English](https://github.com/Dhghomon/easy_rust) - Rust is difficult enough on its own,
+there is no need to complicate it with difficult English, and this guide solves this!
 * [This Week In Rust](https://this-week-in-rust.org/) - Weekly newsletter on all things Rust: new blog posts, videos, conferences, features etc. 
 * [This Month in OSDev](https://rust-osdev.com/) - Monthly newsletter on Operating Systems development in Rust
 * [This Month in GameDev](https://rust-gamedev.github.io/) - Monthly newsletter on gamedevelopment in Rust
-* [pretzelhammer's blog](https://github.com/pretzelhammer/rust-blog/)
-* [phil-op blog](https://os.phil-opp.com/)
-* [fasterthanlime blog](https://fasterthanli.me/)
-* [Depth-First blog](https://depth-first.com/)
-* [Armin Ronacher's blog](https://lucumr.pocoo.org/about/)
-* [Stephen Marz OS blog](https://osblog.stephenmarz.com/)
-* [Carlos Galdino's blog](https://blog.carlosgaldino.com/)
-* [A Gentle Introduction to Rust](https://stevedonovan.github.io/rust-gentle-intro/)
-* [Rust101](https://www.ralfj.de/projects/rust-101/)
-* [A creative coding framework](https://nannou.cc/)
-* [RustStarterKit 2020](https://wiki.alopex.li/RustStarterKit2020)
-* [Are We Web Yet?](https://www.arewewebyet.org/)
+* [pretzelhammer's blog](https://github.com/pretzelhammer/rust-blog/) - What follows is a bunch of blogs that I found nice, by no 
+means an exhaustive list. pretzelhammer writes super cool deep dive articles on Rust-specific stuff which makes people's heads boil.
+* [phil-op blog](https://os.phil-opp.com/) - Philipp Oppermann's x86 Operating System Blog. The next best thing in the Internet after this repository web page.
+* [fasterthanlime blog](https://fasterthanli.me/) - A great blog on all things Rust. 
+* [Depth-First blog](https://depth-first.com/) - A few interesting things here. Not that many though.
+* [Armin Ronacher's blog](https://lucumr.pocoo.org/about/) - This guy created Flask and Jinja. And now he writes about Rust. What more do you need.
+* [Stephen Marz OS blog](https://osblog.stephenmarz.com/) - RISC-V OS Blog.
+* [Carlos Galdino's blog](https://blog.carlosgaldino.com/) - This blog has an interesting practical Rust file system implementation
+* [A Gentle Introduction to Rust](https://stevedonovan.github.io/rust-gentle-intro/) - One of the many relatively short intro guides to Rust. This is one of the better ones.
+* [Rust101](https://www.ralfj.de/projects/rust-101/) - One of the many tutorials I think has something going for it.
+* [A creative coding framework](https://nannou.cc/) - Just something I hacked with for a while and it's super nice.
+* [RustStarterKit 2020](https://wiki.alopex.li/RustStarterKit2020) - An interesting guide on things you might wanna
+consider using if you work with Rust in 2020+. Since Rust has a minimal standard library, it suggests a few popular
+math crates, utility crates that work with different file formats, devices etc., as well as a lot of algorithms/data
+structures implemented efficiently, networking/web stuff, asynchronous crates.
+* [Are We Web Yet?](https://www.arewewebyet.org/) - What follows are several websites tracking Rust progress on the way of
+becoming a usable language in a specific domain. This requires having a bunch of often difficult libraries and vibrant
+communities to support them. Makes it a little easier to know whether Rust is okay to use in a web/game/ml/gui context.
 * [Are We Game Yet?](https://arewegameyet.rs/)
 * [Are We Learning Yet?](http://www.arewelearningyet.com/)
 * [Are We IDE Yet?](https://areweideyet.com/)
