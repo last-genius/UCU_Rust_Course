@@ -12,7 +12,7 @@ so they might contain errors, and will definitely change
 	1. [Books](#Books)
 	1. [Practice](#Practice)
 	1. [Other resources](#Other-resources)
-1. [(TODO!!!!) Vim integration guide]()
+1. [Vim integration guide](#Vim-Integration-Guide)
 
 ##### TODO:
 * Finish up the second lecture and clean up first two classes' homeworks
@@ -23,6 +23,8 @@ so they might contain errors, and will definitely change
 
 ## Schedule
 
+[*Latex sources are available here*](https://github.com/LastGenius-edu/latex_templates)
+
 [![](images/week6.png)](rust_1/lecture.pdf)
 [![](images/week7.png)](rust_2/lecture.pdf)
 [![](images/week9.png)]()
@@ -32,6 +34,9 @@ so they might contain errors, and will definitely change
 
 ### Cool Rust apps
 
+* [`nushell`](https://github.com/nushell/nushell) - An interesting new type of shell
+* [`dust`](https://github.com/bootandy/dust) - A more intuitive replacement for `du`
+* [`ytop`](https://github.com/cjbassi/ytop) - A super-fast `top` replacement
 * [`broot`](https://github.com/Canop/broot) - Cool new `tree` (a lot more usable)
 * [`bat`](https://github.com/sharkdp/bat) -  Updated `cat` (with git integration and a lot more)
 * [`exa`](https://github.com/ogham/exa) - Modern replacement for `ls` 
@@ -130,6 +135,7 @@ means an exhaustive list. pretzelhammer writes super cool deep dive articles on 
 * [Armin Ronacher's blog](https://lucumr.pocoo.org/about/) - This guy created Flask and Jinja. And now he writes about Rust. What more do you need.
 * [Stephen Marz OS blog](https://osblog.stephenmarz.com/) - RISC-V OS Blog.
 * [Carlos Galdino's blog](https://blog.carlosgaldino.com/) - This blog has an interesting practical Rust file system implementation
+* [Shesh's blog](http://www.sheshbabu.com/) - A nice blog going over some of the basic Rust things and teaching Rust for JavaScript devs
 * [A Gentle Introduction to Rust](https://stevedonovan.github.io/rust-gentle-intro/) - One of the many relatively short intro guides to Rust. This is one of the better ones.
 * [Rust101](https://www.ralfj.de/projects/rust-101/) - One of the many tutorials I think has something going for it.
 * [A creative coding framework](https://nannou.cc/) - Just something I hacked with for a while and it's super nice.
@@ -145,3 +151,9 @@ communities to support them. Makes it a little easier to know whether Rust is ok
 * [Are We IDE Yet?](https://areweideyet.com/)
 * [Are We GUI Yet?](https://www.areweguiyet.com/)
 
+## Vim Integration Guide
+
+**My dotfiles with detailed instructions are available [over here](https://github.com/LastGenius-edu/my_dotfiles).**
+
+You don't have to use Vim of course, Rust has nice integrations for most
+of the popular IDEs, including VSCode, JetBrains, Emacs etc.
