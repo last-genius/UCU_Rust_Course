@@ -3,3 +3,8 @@ fn as_str(data: &u32) -> &str {
 
     &s
 }
+
+pub fn main() {
+    let n = 5;
+    as_str(&n);
+}

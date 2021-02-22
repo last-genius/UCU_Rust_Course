@@ -1,10 +1,10 @@
-fn borrow(text: &str) {
+fn borrow(text: &String) {
     println!("I immutably borrowed this text: {}", text);
 }
 
-fn mut_borrow(text: &mut str) {
-    text = "new text";
-    println!("I mutably borrowed text and changed it to:", text);
+fn mut_borrow(text: &mut String) {
+    text.push_str(" + new text");
+    println!("I mutably borrowed text and changed it to: {}", text);
 }
 
 fn main() {
