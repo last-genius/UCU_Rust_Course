@@ -17,8 +17,6 @@ so they might contain errors, and will definitely change
 ##### TODO:
 * Finish up the second lecture and clean up first two classes' homeworks
 * Start working on the third and fourth lectures
-* Improve formatting in this doc a bit (maybe just split it between several files?)
-* Add some basic commentary to all resources, add more apps
 * Start thinking of project topics and organizing that
 
 ## Schedule
