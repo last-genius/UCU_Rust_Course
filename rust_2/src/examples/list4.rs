@@ -1,12 +1,14 @@
 impl Node {
     fn new(value: u32, next: Option<Box<Node>>) -> Node {
-        Node {value: value, next: next}
+        Node { value, next }
     }
 }
 
 impl LinkedList {
     pub fn new() -> LinkedList {
-        LinkedList {head: None, size: 0}
+        LinkedList {
+            head: None,
+            size: 0,
+        }
     }
 }
-

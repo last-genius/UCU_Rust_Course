@@ -1,9 +1,5 @@
-fn write_info_old(info: &Info) -> io::Result<()> {
-    // Early return on error
-    let mut file = match File::create("file.txt") {
-           Err(e) => return Err(e),
-           Ok(f) => f,
-    };
+// Panic if the Err() occurs:
+let ok_message = result_test().unwrap();
 
-    // Further work with the valid file
-}
+// Panic if the Err() occurs, but add a message:
+let ok_message = result_test().expect("message text");

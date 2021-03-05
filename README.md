@@ -69,6 +69,8 @@ though! You might just need to explore a couple of topics to understand how basi
 and then just read up on something when you need it/when you are having problems with it. Once again, Rust documentation
 is awesome, it allows you to jump to the source code immediately, since recently it allows you to nicely link to stuff,
 allows to quickly look up types etc.
+* [Async Book](https://rust-lang.github.io/async-book/) - Rust introduced stable `async/.await` syntax in 2019, which
+is now used in many libraries (`tokio`, `rayon`), and allows for fearless and beautiful concurrency.
 
 #### Intermediate References
 
@@ -85,7 +87,6 @@ understand Rust ecosystem better or if you want to contribute to it.
 * [Compiler Error Index](https://doc.rust-lang.org/error-index.html) - ALL of the possible errors the Rust compiler might throw at you. There
 are legends of people who have memorized all of it and have obtained the power of the whole galaxy (or just have never encountered another Rust
 compiler error, and who is to say which is better).
-* [Rust and WebAssembly](https://rustwasm.github.io/book/) - A little book on how to marry Rust and WASM together. They love each other.
 
 #### Advanced level
 
@@ -148,6 +149,7 @@ communities to support them. Makes it a little easier to know whether Rust is ok
 * [Are We Learning Yet?](http://www.arewelearningyet.com/)
 * [Are We IDE Yet?](https://areweideyet.com/)
 * [Are We GUI Yet?](https://www.areweguiyet.com/)
+* [Are We Async Yet?](https://areweasyncyet.rs/)
 
 ## Vim Integration Guide
 

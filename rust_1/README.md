@@ -7,5 +7,6 @@ Instead of retyping or copying them you can just use cargo this way:
 cargo init
 
 # Run the file you want to check
+# Some of the files won't be run, they're just examples for you to read through
 cargo run --example name
 ```
