@@ -15,9 +15,8 @@ so they might contain errors, and will definitely change
 1. [Vim integration guide](#Vim-Integration-Guide)
 
 ##### TODO:
-* Finish up the second lecture and clean up first two classes' homeworks
-* Start working on the third and fourth lectures
-* Start thinking of project topics and organizing that
+* Clean up first two classes' homeworks
+* Start thinking of project topics and organizing them
 
 ## Schedule
 
@@ -25,7 +24,7 @@ so they might contain errors, and will definitely change
 
 [![](images/week6.png)](rust_1/lecture.pdf)
 [![](images/week7.png)](rust_2/lecture.pdf)
-[![](images/week9.png)]()
+[![](images/week9.png)](rust_3/lecture.pdf)
 [![](images/week10.png)]()
 
 ## Resources
@@ -71,6 +70,9 @@ is awesome, it allows you to jump to the source code immediately, since recently
 allows to quickly look up types etc.
 * [Async Book](https://rust-lang.github.io/async-book/) - Rust introduced stable `async/.await` syntax in 2019, which
 is now used in many libraries (`tokio`, `rayon`), and allows for fearless and beautiful concurrency.
+* [Roguelike Book](https://bfnightly.bracketproductions.com/rustbook/) - A nice intro to Rust through a simple game (also uses ECS!)
+* [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/) - A head-on Rust book that does not
+fear difficult Rust memory stuff and implements a bunch of linked lists (which are their own thing with Rust's ownership system).
 
 #### Intermediate References
 
