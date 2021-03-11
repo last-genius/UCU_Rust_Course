@@ -73,6 +73,7 @@ is now used in many libraries (`tokio`, `rayon`), and allows for fearless and be
 * [Roguelike Book](https://bfnightly.bracketproductions.com/rustbook/) - A nice intro to Rust through a simple game (also uses ECS!)
 * [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/) - A head-on Rust book that does not
 fear difficult Rust memory stuff and implements a bunch of linked lists (which are their own thing with Rust's ownership system).
+* [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html) - A nice little collection of practical lessons on Rust macros.
 
 #### Intermediate References
 
@@ -135,10 +136,11 @@ means an exhaustive list. pretzelhammer writes super cool deep dive articles on 
 * [Depth-First blog](https://depth-first.com/) - A few interesting things here. Not that many though.
 * [Armin Ronacher's blog](https://lucumr.pocoo.org/about/) - This guy created Flask and Jinja. And now he writes about Rust. What more do you need.
 * [Stephen Marz OS blog](https://osblog.stephenmarz.com/) - RISC-V OS Blog.
-* [Carlos Galdino's blog](https://blog.carlosgaldino.com/) - This blog has an interesting practical Rust file system implementation
-* [Shesh's blog](http://www.sheshbabu.com/) - A nice blog going over some of the basic Rust things and teaching Rust for JavaScript devs
+* [Carlos Galdino's blog](https://blog.carlosgaldino.com/) - This blog has an interesting practical Rust file system implementation.
+* [Shesh's blog](http://www.sheshbabu.com/) - A nice blog going over some of the basic Rust things and teaching Rust for JavaScript devs.
+* [Gankra's blog](https://gankra.github.io/) - An awesome intermediate/advanced blog on the intricacies of Rust's (often unsafe) groundings from the author of the Rustonomicon.
 * [A Gentle Introduction to Rust](https://stevedonovan.github.io/rust-gentle-intro/) - One of the many relatively short intro guides to Rust. This is one of the better ones.
-* [Rust101](https://www.ralfj.de/projects/rust-101/) - One of the many tutorials I think has something going for it.
+* [Rust101](https://www.ralfj.de/projects/rust-101/) - One of the many tutorials I think has something going for it (and the blog is awesome too!)
 * [A creative coding framework](https://nannou.cc/) - Just something I hacked with for a while and it's super nice.
 * [RustStarterKit 2020](https://wiki.alopex.li/RustStarterKit2020) - An interesting guide on things you might wanna
 consider using if you work with Rust in 2020+. Since Rust has a minimal standard library, it suggests a few popular
