@@ -14,18 +14,15 @@ so they might contain errors, and will definitely change
 	1. [Other resources](#Other-resources)
 1. [Vim integration guide](#Vim-Integration-Guide)
 
-##### TODO:
-* Clean up first two classes' homeworks
-* Start thinking of project topics and organizing them
-
 ## Schedule
 
 [*Latex sources are available here*](https://github.com/LastGenius-edu/latex_templates)
 
-[![](images/week6.png)](rust_1/lecture.pdf)
-[![](images/week7.png)](rust_2/lecture.pdf)
-[![](images/week9.png)](rust_3/lecture.pdf)
-[![](images/week10.png)]()
+[![](images/week1.png)](rust_1/lecture.pdf)
+[![](images/week2.png)](rust_2/lecture.pdf)
+[![](images/projects.png)](./PROJECTS.md)
+[![](images/week3.png)](rust_3/lecture.pdf)
+[![](images/week4.png)]()
 
 ## Resources
 
