@@ -1,4 +1,4 @@
-This is a rough homework outline for the first week of the Rust course.
+# Homework 1
 
 I don't really care about how you submit it, but sending a pull request
 with a new directory homework/name should probably be okay.
@@ -9,11 +9,12 @@ We have already learned about a few main concepts which should help you here:
 * Basic cargo workflow
 * Basic error handling with .expect() and match expressions
 
-(Feel free to re-read the lecture, I've updated it a little, and also
-deleted unnecessary code snippets so it'd be easier to navigate the code 
-directory. You can also just always ask me if you need help with anything!)
+(Feel free to re-read the lecture and look at the code again (it's available at 
+`src/examples/`). You can also just always ask me if you need help with anything!)
 
-#### The assignment itself is super simple - implement a hangman-like terminal game!
+The assignment itself is super simple:
+
+## Implement a hangman-like terminal game!
 
 An example of the status printout might look like this:
 
@@ -85,3 +86,7 @@ and if you find yourself in such a screwup, just ask me, I'll try to help!
 Please don't be mad at me or the compiler. We are really trying to help,
 and if I am mistaken like 70% of the time, compiler never is, so you
 should listen to it!
+
+---
+If, after submitting this, you feel like this assignment was too easy, try implementing something 
+else for yourself!
