@@ -20,8 +20,8 @@ so they might contain errors, and will definitely change
 
 [![](images/week1.png)](rust_1/lecture.pdf)
 [![](images/week2.png)](rust_2/lecture.pdf)
-[![](images/projects.png)](./PROJECTS.md)
 [![](images/week3.png)](rust_3/lecture.pdf)
+[![](images/projects.png)](./PROJECTS.md)
 [![](images/week4.png)]()
 
 ## Resources

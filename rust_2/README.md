@@ -1,5 +1,5 @@
-This is a directory with all the Lecture 1 materials, including the
-code snippets we use on the lecture.
+This is a directory with all the Lecture 2 materials, including the
+code snippets we used on the lecture.
 
 Instead of retyping or copying them you can just use cargo this way:
 ```
