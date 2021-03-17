@@ -1,9 +1,4 @@
-A WIP repository for Linux_Club@UCU Rust course
-
-(The course itself is expected to start in March 2021)
-
-I am adding notes and code snippets as I go on creating and testing them,
-so they might contain errors, and will definitely change
+A repository for [Linux_Club@UCU](https://github.com/ucu-cs/UCU_Linux_Club) Rust course
 
 ## Contents
 1. [Schedule](#Schedule)
