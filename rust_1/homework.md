@@ -79,6 +79,13 @@ io::stdin()
         .expect("Error reading line.");
 ```
 
+You might also want to have a look at `std::string::String` documentation page,
+specifically these methods:
+* [.contains()](https://doc.rust-lang.org/std/string/struct.String.html#method.contains)
+* [.chars()](https://doc.rust-lang.org/std/string/struct.String.html#method.chars)
+* And this StackOverflow [answer](https://stackoverflow.com/questions/24542115/how-to-index-a-string-in-rust) might also help
+* And an [explanation](https://doc.rust-lang.org/std/string/struct.String.html#utf-8) on why Rust strings do no support indexing operations
+
 Don't overdo it! It's easy to get carried away and start googling
 how to do this or that. You really don't need any new concepts,
 and if you find yourself in such a screwup, just ask me, I'll try to help!
