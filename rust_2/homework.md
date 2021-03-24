@@ -17,19 +17,19 @@ you should start getting familiar with Rust documentation,
 just don't overwhelm yourself!
 
 (Feel free to re-read the lecture and look at the code again (it's available at 
-`src/examples/`). You can also just always ask me if you need help with anything!)
+`./examples/`). You can also just always ask me if you need help with anything!)
 
 ## `ls` and `tree` implementations
 
 This assignment requires you to implement a program that will take some
 command-line input and produce output, be it a list of directory entries
-in a list-like fashion, or a list of every entry of everything below it
-in a tree-like fashion.
+in a list-like fashion, or a list of every entry of everything below the entry
+specified by the user in a tree-like fashion.
 
 #### 1. `ls`
 
 You should start with a basic (and stupid!) snippet of code that takes
-one command-line argument (the directory to list) and lists it out!
+one command-line argument (the directory which entries to list) and lists it out!
 
 ```rust
 use std::env;
@@ -77,7 +77,7 @@ how it handles different cases:
 
 ```bash
 # '--' allows you to separate arguments to cargo from arguments to your program
-# '.' is just a current directory in *nix!
+# '.' is just the current directory in *nix systems!
 $ cargo run -- .
 .git
 Cargo.toml
@@ -101,8 +101,11 @@ but not limited to:
 	* [std::fs::read_dir](https://doc.rust-lang.org/std/fs/fn.read_dir.html)
 	* [std::fs::DirEntry](https://doc.rust-lang.org/std/fs/struct.DirEntry.html)
 
-Feel free to modify the functionality of the program! For example, you might 
-happen to see some methods and functions that would help you output the 
+You should modify the functionality of the program to your liking, improving
+the code above and adding new features. I am not asking anything specific from you,
+but you might look at your own `ls` (and its man page: `man ls`) and start implementing
+its options, or just adding custom stuff for yourself that you think is missing from `ls`.
+For example, you might happen to see some methods and functions that would help you output the 
 directory listing in a nicer way:
 
 ```
@@ -112,15 +115,14 @@ directory listing in a nicer way:
 ```
 
 Or, you could try hiding the files starting with `.` and showing them
-if the user provides an option! You could also look into [`clap`](https://docs.rs/clap/2.33.3/clap/)
+if the user provides an option (like `-a`)! You could also look into [`clap`](https://docs.rs/clap/2.33.3/clap/)
 and [its page in Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/cli/arguments.html)
 to better handle user input and options.
 
 *Note: this is the only external dependency you might need in this project, don't
 forget to add it to `Cargo.toml`!*
 
-
-Also, improve error handling with the methods we've discussed in the lecture,
+Also, you can improve error handling with the methods we've discussed in the lecture,
 and read up on more of them in the documentation:
 
 * [std::result::Result](https://doc.rust-lang.org/std/result/enum.Result.html)
@@ -144,7 +146,7 @@ In this new project, you are going to have to implement basic `tree`
 functionality, which is going to require you to recursively
 go through the directories below the one specified by the user.
 
-A simple output would look like this:
+A simple output would look like this (just launch your system's `tree`):
 
 ```
 current_directory_name
@@ -154,8 +156,9 @@ current_directory_name
     |---main.src
 ```
 
-Feel free to experiment (once again!), although you probably are going to
-have to split the argument parsing functionality and directory recursing functionality
+Feel free to experiment (once again!), adding some more options from `man tree` or
+customizing it to your liking. Although you probably are going to have to split the
+argument parsing functionality and directory recursing functionality
 into different functions for sure!
 
 #### Bonus: `find`
@@ -166,5 +169,5 @@ that satisfy given regex patterns. You can add this functionality to your `ls`
 module, or your `tree` module (or both)!
 
 Look into this [regex crate](https://docs.rs/regex/1.4.2/regex/index.html) and 
-specifically its is_match method! Once again, feel free to add user command line
+specifically its `is_match` method! Once again, feel free to add user command line
 options and use `clap` (see above) to write a more detailed help page!
