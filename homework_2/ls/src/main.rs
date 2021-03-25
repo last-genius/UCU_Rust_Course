@@ -1,8 +1,12 @@
+mod models;
+
 use std::env;
 use std::fs;
 use std::io;
 use std::path::{Path};
 use std::io::{Error};
+use std::fs::DirEntry;
+use crate::models::{FileModel, FileSize};
 
 fn main() -> io::Result<()> {
     // Collecting command line arguments
@@ -18,9 +22,13 @@ fn main() -> io::Result<()> {
     // If the path provided to us is a directory, read its entries
     if start_path.is_dir() {
         match read_files_in_dir(start_path) {
-            Ok(file_names) => {
-                for file_name in file_names {
-                    println!("{}", file_name)
+            Ok(mut file_models) => {
+                println!("List of files in {}", start_path.to_string_lossy());
+                println!("{:36} {:9}", "Name", "Size");
+
+                file_models.sort_by(|a, b| a.name.cmp(&b.name));
+                for model in file_models {
+                    println!("{:36} {:9}", model.name, model.size.to_human_str())
                 }
             }
             Err(e) => eprintln!("Error reading files in directory: {}", e)
@@ -33,15 +41,25 @@ fn main() -> io::Result<()> {
     Ok(())
 }
 
-fn read_files_in_dir(directory: &Path) -> Result<Vec<String>, Error> {
+fn read_files_in_dir(directory: &Path) -> Result<Vec<FileModel>, Error> {
     let mut file_vector = Vec::new();
     // Iterate over entries in the directory
     for entry in fs::read_dir(directory)? {
         let entry = entry?;
 
-        // Get file name
-        let os_file_name = entry.file_name();
-        file_vector.push(String::from(os_file_name.to_string_lossy()));
+        file_vector.push(parse_dir_entry(&entry)?);
     }
     Ok(file_vector)
+}
+
+fn parse_dir_entry(entry: &DirEntry) -> io::Result<FileModel> {
+    let name = {
+        let os_file_name = entry.file_name();
+        String::from(os_file_name.to_string_lossy())
+    };
+    let metadata = entry.metadata()?;
+    let size: u64 = metadata.len();
+    let is_ro = metadata.permissions().readonly();
+
+    Ok(FileModel { name, size: FileSize { size }, is_ro })
 }
