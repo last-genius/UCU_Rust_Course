@@ -3,6 +3,7 @@ use std::fs;
 use std::io;
 use std::path::{Path, PathBuf};
 use std::io::{Error, ErrorKind};
+use std::ops::Deref;
 
 fn main() -> io::Result<()> {
     // Collecting command line arguments
@@ -40,7 +41,7 @@ fn read_files_in_dir(directory: &Path) -> Result<Vec<String>, Error> {
         let entry = entry?;
         let entry_path: PathBuf = entry.path();
 
-        let os_file_name = entry_path.file_name().and_then(|n| n.to_str());
+        let os_file_name = entry_path.file_name().map(|n| n.to_string_lossy());
         if let Some(file_name) = os_file_name {
             file_vector.push(String::from(file_name));
         } else {
