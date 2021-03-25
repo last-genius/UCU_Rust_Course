@@ -1,9 +1,8 @@
 use std::env;
 use std::fs;
 use std::io;
-use std::path::{Path, PathBuf};
-use std::io::{Error, ErrorKind};
-use std::ops::Deref;
+use std::path::{Path};
+use std::io::{Error};
 
 fn main() -> io::Result<()> {
     // Collecting command line arguments
@@ -39,21 +38,10 @@ fn read_files_in_dir(directory: &Path) -> Result<Vec<String>, Error> {
     // Iterate over entries in the directory
     for entry in fs::read_dir(directory)? {
         let entry = entry?;
-        let entry_path: PathBuf = entry.path();
 
-        let os_file_name = entry_path.file_name().map(|n| n.to_string_lossy());
-        if let Some(file_name) = os_file_name {
-            file_vector.push(String::from(file_name));
-        } else {
-            return Err(
-                Error::new(
-                    ErrorKind::Other,
-                    format!(
-                        "Could not get file name from path: {}",
-                        entry.file_name().to_str().unwrap_or("(Could not convert path to a string)")
-                    ),
-                ));
-        }
+        // Get file name
+        let os_file_name = entry.file_name();
+        file_vector.push(String::from(os_file_name.to_string_lossy()));
     }
     Ok(file_vector)
 }
