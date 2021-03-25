@@ -1,7 +1,8 @@
 use std::env;
 use std::fs;
 use std::io;
-use std::path::Path;
+use std::path::{Path, PathBuf};
+use std::io::{Error, ErrorKind};
 
 fn main() -> io::Result<()> {
     // Collecting command line arguments
@@ -16,16 +17,13 @@ fn main() -> io::Result<()> {
 
     // If the path provided to us is a directory, read its entries
     if start_path.is_dir() {
-
-        // Iterate over entries in the directory
-        for entry in fs::read_dir(start_path)? {
-            let entry = entry?;
-
-            // If it is a valid entry, print its name, otherwise just skip it
-            match entry.path().file_name() {
-                Some(path) => println!("{}", path.to_string_lossy()),
-                None => continue,
-            };
+        match read_files_in_dir(start_path) {
+            Ok(file_names) => {
+                for file_name in file_names {
+                    println!("{}", file_name)
+                }
+            }
+            Err(e) => eprintln!("Error reading files in directory: {}", e)
         }
     } else {
         // If the path provided is a single file, just print its name
@@ -33,4 +31,28 @@ fn main() -> io::Result<()> {
     }
 
     Ok(())
+}
+
+fn read_files_in_dir(directory: &Path) -> Result<Vec<String>, Error> {
+    let mut file_vector = Vec::new();
+    // Iterate over entries in the directory
+    for entry in fs::read_dir(directory)? {
+        let entry = entry?;
+        let entry_path: PathBuf = entry.path();
+
+        let os_file_name = entry_path.file_name().and_then(|n| n.to_str());
+        if let Some(file_name) = os_file_name {
+            file_vector.push(String::from(file_name));
+        } else {
+            return Err(
+                Error::new(
+                    ErrorKind::Other,
+                    format!(
+                        "Could not get file name from path: {}",
+                        entry.file_name().to_str().unwrap_or("(Could not convert path to a string)")
+                    ),
+                ));
+        }
+    }
+    Ok(file_vector)
 }
