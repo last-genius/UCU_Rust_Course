@@ -1,5 +1,6 @@
 pub struct FileModel {
     pub name: String,
+    pub is_hidden: bool,
     pub is_directory: bool,
     pub size: FileSize,
     pub is_ro: bool,

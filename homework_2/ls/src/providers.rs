@@ -22,10 +22,12 @@ pub mod file_provider {
             String::from(os_file_name.to_string_lossy())
         };
         let metadata = entry.metadata()?;
+
+        let is_hidden = name.starts_with(".");
         let is_directory = metadata.is_dir();
         let size: u64 = metadata.len();
         let is_ro = metadata.permissions().readonly();
 
-        Ok(FileModel { name, is_directory, size: FileSize { size }, is_ro })
+        Ok(FileModel { name, is_hidden, is_directory, size: FileSize { size }, is_ro })
     }
 }
