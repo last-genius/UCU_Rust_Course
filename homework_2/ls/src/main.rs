@@ -26,15 +26,20 @@ fn main() -> io::Result<()> {
         match file_provider::get_files_in_directory(start_path) {
             Ok(mut file_models) => {
                 let start_path = start_path.to_string_lossy();
+
                 sort_file_table(&mut file_models);
                 filter_file_table(&mut file_models, args.show_hidden);
                 print_file_table(start_path.as_ref(), &file_models, args.human_readable);
             }
-            Err(e) => eprintln!("Error reading files in directory: {}", e)
+            Err(e) => {
+                eprintln!("Error reading files in directory: {}", e);
+                return Err(e);
+            }
         }
     } else {
-        // If the path provided is a single file, just print its name
-        println!("{}", start_path.file_name().unwrap().to_string_lossy());
+        let parsed_file = file_provider::parse_dir_entry(start_path)?;
+        // If the path provided is a single file, just print its data
+        print_file_model(&parsed_file, args.human_readable);
     }
 
     Ok(())
@@ -49,12 +54,16 @@ fn print_file_table(start_path: &str, file_table: &Vec<FileModel>, human_readabl
     println!("{:36} {:9}", "Name", "Size");
 
     for model in file_table {
-        println!(
-            "{:36} {:9}",
-            format!("{}{}", model.name, if model.is_directory { "/" } else { "" }),
-            if human_readable { model.size.to_human_str() } else { model.size.to_raw_str() }
-        )
+        print_file_model(model, human_readable)
     }
+}
+
+fn print_file_model(model: &FileModel, human_readable: bool) {
+    println!(
+        "{:36} {:9}",
+        format!("{}{}", model.name, if model.is_directory { "/" } else { "" }),
+        if human_readable { model.size.to_human_str() } else { model.size.to_raw_str() }
+    )
 }
 
 fn sort_file_table(file_table: &mut Vec<FileModel>) {
