@@ -3,20 +3,25 @@ mod providers;
 
 use std::env;
 use std::io;
-use std::path::{Path};
+use std::path::PathBuf;
 use providers::file_provider;
+use structopt::StructOpt;
 use crate::models::FileModel;
+use std::env::args;
+
+#[derive(StructOpt)]
+struct CliArgs {
+    #[structopt(short, long = "human")]
+    human_readable: bool,
+    #[structopt(name = "Show all", short = "a", long = "all")]
+    show_hidden: bool,
+    #[structopt(parse(from_os_str), default_value = ".")]
+    start_dir: PathBuf,
+}
 
 fn main() -> io::Result<()> {
-    // Collecting command line arguments
-    let args: Vec<String> = env::args().collect();
-
-    // Making sure there is a filepath provided
-    assert_eq!(args.len(), 2);
-
-    // Getting that filepath provided to us by the user
-    let file_path = &args[1];
-    let start_path = Path::new(file_path);
+    let args: CliArgs = CliArgs::from_args();
+    let start_path = args.start_dir.as_path();
 
     // If the path provided to us is a directory, read its entries
     if start_path.is_dir() {
@@ -24,6 +29,7 @@ fn main() -> io::Result<()> {
             Ok(mut file_models) => {
                 let start_path = start_path.to_string_lossy();
                 sort_file_table(&mut file_models);
+                filter_file_table(&mut file_models, args.show_hidden);
                 print_file_table(start_path.as_ref(), &file_models);
             }
             Err(e) => eprintln!("Error reading files in directory: {}", e)
@@ -34,6 +40,10 @@ fn main() -> io::Result<()> {
     }
 
     Ok(())
+}
+
+fn filter_file_table(file_table: &mut Vec<FileModel>, should_show_hidden: bool) {
+    file_table.retain(|f| !f.is_hidden || should_show_hidden)
 }
 
 fn print_file_table(start_path: &str, file_table: &Vec<FileModel>) {
