@@ -1,13 +1,11 @@
 mod models;
 mod providers;
 
-use std::env;
 use std::io;
 use std::path::PathBuf;
 use providers::file_provider;
 use structopt::StructOpt;
 use crate::models::FileModel;
-use std::env::args;
 
 #[derive(StructOpt)]
 struct CliArgs {
@@ -30,7 +28,7 @@ fn main() -> io::Result<()> {
                 let start_path = start_path.to_string_lossy();
                 sort_file_table(&mut file_models);
                 filter_file_table(&mut file_models, args.show_hidden);
-                print_file_table(start_path.as_ref(), &file_models);
+                print_file_table(start_path.as_ref(), &file_models, args.human_readable);
             }
             Err(e) => eprintln!("Error reading files in directory: {}", e)
         }
@@ -46,7 +44,7 @@ fn filter_file_table(file_table: &mut Vec<FileModel>, should_show_hidden: bool) 
     file_table.retain(|f| !f.is_hidden || should_show_hidden)
 }
 
-fn print_file_table(start_path: &str, file_table: &Vec<FileModel>) {
+fn print_file_table(start_path: &str, file_table: &Vec<FileModel>, human_readable: bool) {
     println!("List of files in {}", start_path);
     println!("{:36} {:9}", "Name", "Size");
 
@@ -54,7 +52,7 @@ fn print_file_table(start_path: &str, file_table: &Vec<FileModel>) {
         println!(
             "{:36} {:9}",
             format!("{}{}", model.name, if model.is_directory { "/" } else { "" }),
-            model.size.to_human_str()
+            if human_readable { model.size.to_human_str() } else { model.size.to_raw_str() }
         )
     }
 }
