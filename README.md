@@ -71,6 +71,8 @@ fear difficult Rust memory stuff and implements a bunch of linked lists (which a
 
 * [Rust Reference](https://doc.rust-lang.org/reference/index.html) - THE Reference, describing everything humanity knows about Rust. Almost.
 Use it as a table book, as an encyclopedia, not as a regular book!
+* [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Super useful and smart ways of achieving basic things in Rust.
+* [Possible Rust](https://www.possiblerust.com) - Guides, Patterns and discussions on what is possible in Rust.
 * [Rust Language Cheat Sheet](https://cheats.rs/) - THE Cheat Sheet to quickly remind yourself how an `if-else` looks like. And everything else too.
 * [Rust Edition Guide](https://doc.rust-lang.org/edition-guide/index.html) - Rust has a 6-week update cycle, but every now and then Rust
 releases a new edition which brings together features over the last few years and introduces breaking changes. This is a guide that helps
@@ -101,12 +103,11 @@ this book still provides many useful ones with detailed descriptions.
 ---
 ### Practice
 
+* [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/) - A bunch of Rust examples ranked by topic and difficulty.
+* [Rust Playground](https://play.rust-lang.org/) - Rust IDE and compiler online.
 * [rustlings](https://github.com/rust-lang/rustlings/) - An interactive basic local course.
 * [Tour of Rust](https://tourofrust.com/) - Basic Web Intro to Rust.
 * [Exercism Rust Track](https://exercism.io/tracks/rust) - Interactive Rust exercises. To get Rust embedded in your muscle memory.
-* [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/) - A bunch of Rust examples ranked by topic and difficulty.
-* [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) - Super useful and smart ways of achieving basic things in Rust.
-* [Rust Playground](https://play.rust-lang.org/) - Rust IDE and compiler online.
 
 ---
 ### Other resources
@@ -118,6 +119,7 @@ this book still provides many useful ones with detailed descriptions.
 * [Awesome Rust](https://github.com/rust-unofficial/awesome-rust) - One of those 'Awesome language' repos, just a collection of Rust projects.
 * [Rust Using Simple English](https://github.com/Dhghomon/easy_rust) - Rust is difficult enough on its own,
 there is no need to complicate it with difficult English, and this guide solves this!
+* [Read Rust](https://readrust.net) - A collection of interesting Rust blog posts.
 * [This Week In Rust](https://this-week-in-rust.org/) - Weekly newsletter on all things Rust: new blog posts, videos, conferences, features etc. 
 * [This Month in OSDev](https://rust-osdev.com/) - Monthly newsletter on Operating Systems development in Rust
 * [This Month in GameDev](https://rust-gamedev.github.io/) - Monthly newsletter on gamedevelopment in Rust
@@ -125,6 +127,9 @@ there is no need to complicate it with difficult English, and this guide solves 
 means an exhaustive list. pretzelhammer writes super cool deep dive articles on Rust-specific stuff which makes people's heads boil.
 * [phil-op blog](https://os.phil-opp.com/) - Philipp Oppermann's x86 Operating System Blog. The next best thing in the Internet after this repository web page.
 * [fasterthanlime blog](https://fasterthanli.me/) - A great blog on all things Rust. 
+* [tyler neely's blog](https://tylerneely.com/) - More of an advanced blog from an author of many popular crates.
+* [Yoshua Wuyts's blog](https://blog.yoshuawuyts.com/) - Cool writing on (mainly) Async Rust.
+* [Niko Matsaki's blog](http://smallcultfollowing.com/babysteps/) - Niko Matsaki is a longtime Rust maintainer (and a part of the compiler team), and reading his insights is eye-opening.
 * [Depth-First blog](https://depth-first.com/) - A few interesting things here. Not that many though.
 * [Armin Ronacher's blog](https://lucumr.pocoo.org/about/) - This guy created Flask and Jinja. And now he writes about Rust. What more do you need.
 * [Stephen Marz OS blog](https://osblog.stephenmarz.com/) - RISC-V OS Blog.
