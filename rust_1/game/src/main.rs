@@ -2,13 +2,11 @@ use std::io;
 use std::io::Write;
 
 fn main() {
-    // let max_word_len = 20;
     let word = "killme";
     let word_len = word.chars().count();
     let mut health = 5;
 
     println!("The secret word is: {}\n", word);
-    // let mut lives = 5;
     let mut word_search = String::new();
     let mut correct_letters = String::new();
     for _ in 0..word_len {
@@ -68,14 +66,3 @@ fn main() {
         println!();
     }
 }
-        // println!("{}", guess);
-        // println!("{}", guess.chars().count());
-        // // guess = guess.chars();
-        // {
-        //     for ch in guess.chars() {
-        //         println!("--------------------");
-        //         println!("{}", ch);
-        //         println!("--------------------\n0");
-        //     }
-        //     // let mut guess = guess.to_str();
-        // }
