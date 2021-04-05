@@ -1,4 +1,4 @@
-A repository for [Linux_Club@UCU](https://github.com/ucu-cs/UCU_Linux_Club) Rust course
+A repository for [Linux_Club@UCU](https://github.com/ucu-cs/UCU_Linux_Club) Rust course.
 
 ## Contents
 1. [Schedule](#Schedule)
@@ -35,6 +35,7 @@ A repository for [Linux_Club@UCU](https://github.com/ucu-cs/UCU_Linux_Club) Rust
 * [`Rust Godot bindings`](https://godot-rust.github.io/) - Super fast replacement for GDScript
 * [`i3status-rust`](https://github.com/greshake/i3status-rust) - Fast i3status replacement
 * [`zola`](https://github.com/getzola/zola) - A fast static site generator in a single binary with everything built-in
+* [`paru`](https://github.com/morganamilo/paru) - A replacement for `yay` from its original creator, now in Rust and faster.
 
 ---
 ### Books
@@ -127,9 +128,13 @@ there is no need to complicate it with difficult English, and this guide solves 
 means an exhaustive list. pretzelhammer writes super cool deep dive articles on Rust-specific stuff which makes people's heads boil.
 * [phil-op blog](https://os.phil-opp.com/) - Philipp Oppermann's x86 Operating System Blog. The next best thing in the Internet after this repository web page.
 * [fasterthanlime blog](https://fasterthanli.me/) - A great blog on all things Rust. 
+* [ralf jung's blog](https://www.ralfj.de/blog/) - A blog from one of the most prominent Rust safety researchers out there.
+* [Luca Palmieri's blog](https://www.lpalmieri.com/) - An interesting blog from "Zero To Production In Rust" series' author.
 * [tyler neely's blog](https://tylerneely.com/) - More of an advanced blog from an author of many popular crates.
 * [Yoshua Wuyts's blog](https://blog.yoshuawuyts.com/) - Cool writing on (mainly) Async Rust.
 * [Niko Matsaki's blog](http://smallcultfollowing.com/babysteps/) - Niko Matsaki is a longtime Rust maintainer (and a part of the compiler team), and reading his insights is eye-opening.
+* [Aleksey Kladov's blog](https://matklad.github.io/) - A more of an advanced blog from one of regular `rustc` contributors, mainly about async and multithreading.
+* [William Woodruff's blog](https://blog.yossarian.net/) - Pretty cool blog on low-level things and how they work with Rust, if they do (and whether they should).
 * [Depth-First blog](https://depth-first.com/) - A few interesting things here. Not that many though.
 * [Armin Ronacher's blog](https://lucumr.pocoo.org/about/) - This guy created Flask and Jinja. And now he writes about Rust. What more do you need.
 * [Stephen Marz OS blog](https://osblog.stephenmarz.com/) - RISC-V OS Blog.
