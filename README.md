@@ -17,7 +17,7 @@ A repository for [Linux_Club@UCU](https://github.com/ucu-cs/UCU_Linux_Club) Rust
 [![](images/week2.png)](rust_2/lecture.pdf)
 [![](images/week3.png)](rust_3/lecture.pdf)
 [![](images/projects.png)](./PROJECTS.md)
-[![](images/week4.png)]()
+[![](images/week4.png)](rust_4/lecture.pdf)
 
 ## Resources
 
